@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir Pendaftaran</title>
+  <style>
+    body { font-family: Arial; background: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+    .form-box { background: #e8f1f8; border: 1px solid #b8d4e3; padding: 20px; border-radius: 8px; width: 450px; }
+    h2 { font-size: 1.2rem; color: #1a365d; margin-top: 0; }
+    .row { display: flex; align-items: center; margin-bottom: 12px; }
+    label { width: 130px; font-weight: bold; font-size: 0.85rem; color: #333; }
+    input[type="text"], input[type="email"], input[type="password"], select {
+      flex: 1; padding: 6px; border: 1px solid #7ea7c5; border-radius: 4px; font-size: 0.85rem; outline: none;
+    }
+    .group-label { font-weight: bold; font-size: 0.85rem; color: #333; margin-bottom: 6px; }
+    .options { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 0.85rem; margin-bottom: 12px; }
+    .options-3 { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 12px; font-size: 0.85rem; margin-bottom: 12px; }
+    button { background: #319795; color: white; border: none; padding: 8px 16px; font-weight: bold; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #277977; }
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <h2>Formulir Pendaftaran Anggota Baru</h2>
+    <form>
+      <div class="row">
+        <label>Nama Lengkap:</label>
+        <input type="text" placeholder="Isi nama Anda">
+      </div>
+      <div class="row">
+        <label>Alamat Email:</label>
+        <input type="email" placeholder="nama@email.com">
+      </div>
+      <div class="row">
+        <label>Kata Sandi:</label>
+        <input type="password" placeholder="••••••••••••">
+      </div>
+
+      <div class="group-label">Pilih Minat Utama (Satu):</div>
+      <div class="options">
+        <label><input type="radio" name="minat" checked> Pengembangan Web</label>
+        <label><input type="radio" name="minat"> Desain Grafis</label>
+        <label><input type="radio" name="minat"> Kriptografi</label>
+        <label><input type="radio" name="minat"> Analis Data</label>
+      </div>
+
+      <div class="group-label">Area Keahlian (Pilih semua yang sesuai):</div>
+      <div class="options-3">
+        <label><input type="checkbox"> HTML/CSS</label>
+        <label><input type="checkbox" checked> JavaScript/Node.js</label>
+        <label><input type="checkbox" checked> Python</label>
+      </div>
+      <div class="options">
+        <label><input type="checkbox"> Desain UI/UX</label>
+        <label><input type="checkbox"> Pemasaran Digital</label>
+      </div>
+
+      <div class="row" style="margin-top: 12px;">
+        <label>Negara Asal:</label>
+        <select style="flex: unset; width: 150px;">
+          <option selected disabled>Pilih Negara | v</option>
+          <option>Indonesia</option>
+          <option>Malaysia</option>
+          <option>Singapura</option>
+        </select>
+      </div>
+
+      <div style="margin-top: 16px;">
+        <button type="submit">[Daftar Sekarang]</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
